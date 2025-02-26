@@ -7,4 +7,4 @@
 *.local.*
 
 # Ignore Delphi history files
-_history/
+__history/
