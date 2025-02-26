@@ -1,0 +1,201 @@
+object frmForecast: TfrmForecast
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Today'#39's Forecast'
+  ClientHeight = 444
+  ClientWidth = 344
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Header: TToolBar
+    Size.Width = 344.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblHeader: TLabel
+      Align = Contents
+      StyledSettings = [Family]
+      Size.Width = 344.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claChocolate
+      TextSettings.HorzAlign = Center
+      Text = 'Weather App '
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 396.000000000000000000
+    Size.Width = 344.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object lblRefresh: TLabel
+      StyledSettings = [FontColor]
+      Position.X = 12.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 155.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Arial'
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Data will refresh in : '
+      TabOrder = 0
+    end
+    object lblCount: TLabel
+      StyledSettings = [FontColor]
+      Position.X = 164.000000000000000000
+      Position.Y = 16.000000000000000000
+      TextSettings.Font.Family = 'Arial'
+      TextSettings.Font.Size = 15.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = '30'
+      TabOrder = 1
+    end
+  end
+  object pnlMain: TPanel
+    Align = Client
+    Size.Width = 344.000000000000000000
+    Size.Height = 348.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object recMain: TRectangle
+      Align = Contents
+      Fill.Color = claHoneydew
+      Size.Width = 344.000000000000000000
+      Size.Height = 348.000000000000000000
+      Size.PlatformDefault = False
+      object imgDay: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 72.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 89.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Stretch
+      end
+      object lblCloudCover: TLabel
+        Anchors = []
+        StyledSettings = [FontColor]
+        Position.X = 131.000000000000000000
+        Position.Y = 268.000000000000000000
+        Size.Width = 94.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Arial'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = '0%'
+        TabOrder = 2
+      end
+      object lblTemp: TLabel
+        Anchors = []
+        StyledSettings = [FontColor]
+        Position.X = 126.000000000000000000
+        Position.Y = 192.000000000000000000
+        Size.Width = 117.000000000000000000
+        Size.Height = 78.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Arial'
+        TextSettings.Font.Size = 30.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = '0C'
+        TabOrder = 6
+      end
+      object lblTime: TLabel
+        Anchors = []
+        StyledSettings = [FontColor]
+        Position.X = 11.000000000000000000
+        Position.Y = 104.000000000000000000
+        Size.Width = 336.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Arial'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.Trimming = Word
+        Text = '01-01-1900 12:00'
+        TabOrder = 4
+      end
+      object lblWindDire: TLabel
+        Anchors = []
+        StyledSettings = [FontColor]
+        Position.X = 256.000000000000000000
+        Position.Y = 163.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Arial'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = '0'#176
+        TabOrder = 3
+      end
+      object lblWindSpeed: TLabel
+        Anchors = []
+        StyledSettings = [FontColor]
+        Position.X = 17.000000000000000000
+        Position.Y = 163.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Arial'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = '0km/h'
+        TabOrder = 5
+      end
+      object imgWindSpeed: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 24.000000000000000000
+        Position.Y = 203.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object imgWindDir: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 255.000000000000000000
+        Position.Y = 203.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object imgCloudCover: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 126.000000000000000000
+        Position.Y = 307.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object tmRefresh: TTimer
+    Enabled = False
+    OnTimer = tmRefreshTimer
+    Left = 280
+    Top = 404
+  end
+end
